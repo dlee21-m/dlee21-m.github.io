@@ -1,55 +1,233 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!DOCTYPE html><html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>이두원 | 소개 페이지</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 100px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 10px;
-        }
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-        footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #999;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | 이두원</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Noto Sans KR", Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: var(--text);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+header {
+  margin-bottom: 48px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+}
+
+header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+section {
+  background: rgba(17, 24, 39, 0.85);
+  border-radius: 20px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.about p {
+  line-height: 1.7;
+  margin: 0 0 12px 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 12px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #bae6fd;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.event .date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.event .content {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px 18px;
+  border-radius: 14px;
+}
+
+.event .content strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .event {
+    grid-template-columns: 1fr;
+  }
+  .event .date {
+    text-align: left;
+  }
+}
+
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>이두원</h1>
-        <h2>(Lee Duwon)</h2>
+  <div class="container">
+    <header>
+      <h1>이두원</h1>
+      <p>ME팀 · Defect 제어 그룹</p>
+    </header><section class="about">
+  <h2>ABOUT ME</h2>
+  <p>
+    안녕하세요. D1a 업무를 마치고, 다른 모듈에서 <strong>D1b 양산 TF</strong>에
+    합류하게 된 Defect 제어 담당 이두원입니다.
+  </p>
+  <p>
+    영영 끝나지 않을 것 같던 코로나19도 어느덧 엔데믹을 바라보고 있는 시점에서,
+    일에서만 만나지 않고 다 같이 회식도 하며 으쌰으쌰할 수 있는 기회가 있으면
+    좋겠습니다.
+  </p>
+  <p>
+    성공적인 D1b 양산 공정 개발을 기원합니다.<br />
+    <strong>D1b 양산 TF 화이팅! 잘 부탁드립니다.</strong>
+  </p>
+</section>
 
-        <p>
-            안녕하세요 👋<br>
-            테스트용으로 만든 간단한 자기소개 페이지입니다.
-        </p>
+<section>
+  <h2>WHAT I WANT TO SAY</h2>
+  <div class="tags">
+    <span class="tag">취미는 사진</span>
+    <span class="tag">육아로 놓은 지 오래</span>
+    <span class="tag">결혼 5년 차</span>
+    <span class="tag">24개월 딸램</span>
+    <span class="tag">장거리 통근</span>
+    <span class="tag">254km / 일</span>
+  </div>
+</section>
 
-        <p>
-            HTML과 CSS 연습을 위해 제작되었습니다.
-        </p>
-
-        <footer>
-            © 2025 Lee Duwon
-        </footer>
+<section>
+  <h2>HISTORY</h2>
+  <div class="timeline">
+    <div class="event">
+      <div class="date">1991.05.10</div>
+      <div class="content">
+        <strong>Birth</strong>
+        생일
+      </div>
     </div>
+
+    <div class="event">
+      <div class="date">2015.03</div>
+      <div class="content">
+        <strong>석사 졸업 & 군 복무</strong>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">2018.07</div>
+      <div class="content">
+        <strong>결혼</strong>
+        5년 연애 끝에 결혼
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">2019.01</div>
+      <div class="content">
+        <strong>… 백수 …</strong>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">2019.08</div>
+      <div class="content">
+        <strong>삼성전자 입사</strong>
+        P1D Defect 제어 (DCCP ~ CAP)
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">2020.04</div>
+      <div class="content">
+        <strong>첫째 출산</strong>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">2020.08</div>
+      <div class="content">
+        <strong>D1a TF Defect 제어</strong>
+        (DCCP ~ CAP)
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">2022.04</div>
+      <div class="content">
+        <strong>D1b TF Defect 제어</strong>
+        (ACT ~ GBC)
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  ⓒ Duwon Lee · Self Introduction
+</footer>
+
+  </div>
 </body>
 </html>
